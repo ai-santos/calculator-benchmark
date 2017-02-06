@@ -1,0 +1,22 @@
+.body-font {
+  font-family: 'Roboto', sans-serif;
+  font-size: 36px;
+}
+
+.calculator-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border: 5px solid red;
+  width: 100%;
+  height: 700px;
+}
+
+.calculator-body {
+  display: flex;
+  border: 5px solid red;
+  border-radius: 6px;
+  box-shadow: 10px 10px black;
+  width: 300px;
+  height: 400px
+}
