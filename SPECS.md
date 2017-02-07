@@ -82,3 +82,38 @@ In stage 1 you will only be using `HTML` and `CSS` to build a clone of the OS X 
 - [x] All class names re: the calculator are name-spaced under `.calculator-…`
 - [ ] Your stylesheet contains little to no duplicate style declarations
 
+### Stage 2
+
+In stage 2 you will be adding `JavaScript` to make the calculator work.
+
+##### In this stage you will be using at least the following skills:
+
+- ES5 syntax
+- Registering event listeners
+- Binding to the DOM Ready event
+- JavaScript closures
+- JavaScript callbacks
+- JavaScript formatting
+- Event Delegation
+- Event bubbling
+- Querying the DOM API
+- Manipulating the DOM using the DOM API
+- Avoiding using the DOM for state
+
+
+##### During this phase you should…
+
+- NOT use `jQuery` or any other `JavaScript` libraries or frameworks
+
+##### Specs
+
+- [ ] Your `JavaScript` is written in `ES5`
+- [ ] Your `JavaScript` follows this [style guide](https://google.github.io/styleguide/jsguide.html)
+- [ ] Your JavaScript defines 1 or less global variables
+- [ ] The Calculator display is not an `<input>`
+- [ ] Typing a relevant key at any point is reflected on the calculator
+- [ ] Typing a relevant key causes the corresponding button on the calculator to appear to have been pressed. AKA flashes active
+- [ ] The state of the calculator is not be stored in the `DOM`
+- [ ] The mathematical operations for your calculator are each their own function, and are defined outside of any DOM event handler
+- [ ] When the length of the number displayed exceeds the width available, the font-size deterministically drops
+

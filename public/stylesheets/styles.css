@@ -52,6 +52,12 @@
   text-align: center;
 }
 
+.calculator-operations-font {
+  font-family: 'Roboto', sans-serif;
+  font-size: 25px;
+  color: #fff;
+}
+
 .calculator-body {
   border: 1px solid #8E8E8E;
   border-radius: 6px;
