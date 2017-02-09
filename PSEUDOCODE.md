@@ -2,7 +2,7 @@ PSEUDOCODE FOR CALCULATOR BENCHMARK:
 
 GET MULTIPLICATION FUNCTIONALITY TO WORK
   Store the first num pressed
-  When X is pressed change the num displayed to the new num pressed
+  When X is pressed remember that multiply has been pressed
   When = is pressed change the num displayed to the result of multiplying both nums
 
 GET ADDITION FUNCTIONALITY TO WORK
