@@ -25,9 +25,6 @@ document.addEventListener("DOMContentLoaded", function(event) {
   // }
   //
 
-
-
-
   var calcNums = document.querySelector('.calculator-nums');
   calcNums.onclick = function calcNums(event) {
     var calculatorWindow = document.querySelector(".calculator-display-num");
@@ -44,7 +41,7 @@ document.addEventListener("DOMContentLoaded", function(event) {
 
     var multiply = function() {
       var calculatorWindow = document.querySelector(".calculator-display-num");
-      var newNums = calculatorWindow.innerText = parseInt(calculatorWindow.innerText + event.target.innerText);
+      var newNums = calculatorWindow.innerText;
       var result = currentNums * newNums
       if(event.target.innerText === '='){
         return result
@@ -56,7 +53,6 @@ document.addEventListener("DOMContentLoaded", function(event) {
     } else if(event.target.innerText === 'x') {
       console.log('we are here now', event.target.innerText)
       var calculatorWindow = document.querySelector(".calculator-display-num");
-      calculatorWindow.innerText = 0
       multiply()
     }
   }

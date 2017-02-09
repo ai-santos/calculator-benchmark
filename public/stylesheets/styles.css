@@ -1,36 +1,36 @@
-.screen-buttons {
-  display: flex;
-  flex-direction: row;
-  align-self: flex-start;
-  padding-right: 205px;
-}
+// .screen-buttons {
+//   display: flex;
+//   flex-direction: row;
+//   align-self: flex-start;
+//   padding-right: 205px;
+// }
 
-.btn-spacing {
-  margin: 5px;
-}
+// .btn-spacing {
+//   margin: 5px;
+// }
 
-.btn {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  height: 15px;
-  width: 15px;
-  border-radius: 50%;
-  font-family: 'Roboto', sans-serif;
-  font-size: 12px;
-}
+// .btn {
+//   display: flex;
+//   justify-content: center;
+//   align-items: center;
+//   height: 15px;
+//   width: 15px;
+//   border-radius: 50%;
+//   font-family: 'Roboto', sans-serif;
+//   font-size: 12px;
+// }
 
-.btn-close {
-  background-color: #fc5855;
-}
+// .btn-close {
+//   background-color: #fc5855;
+// }
 
-.btn-min {
-  background-color: #fec141;
-}
+// .btn-min {
+//   background-color: #fec141;
+// }
 
-.btn-open {
-  background-color: #35cb4b;
-}
+// .btn-open {
+//   background-color: #35cb4b;
+// }
 
 // .btn-close:hover {
 //   font-family: 'Roboto', sans-serif;
