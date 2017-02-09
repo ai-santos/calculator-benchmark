@@ -74,6 +74,7 @@
 
 .calculator-window {
   display: flex;
+  justify-content: flex-start;
   background-color: #969696;
   border: #8E8E8E;
   width: 300px;
@@ -86,6 +87,7 @@
 }
 
 .calculator-button:hover, .calculator-button:active {
+  cursor: pointer;
   opacity: 0.8;
   background-color: rgba(0, 0, 0, 0.5);
   transition-timing-function: ease;
@@ -106,7 +108,18 @@
 }
 
 .calculator-button-zero {
-  width: 154px;
+  width: 152px;
+  height: 58px;
+  border: 1px solid #8E8E8E;
+}
+
+.calculator-button-zero:hover {
+  cursor: pointer;
+  opacity: 0.8;
+  background-color: rgba(0, 0, 0, 0.5);
+  transition-timing-function: ease;
+  transition-duration: 100ms;
+  width: 152px;
   height: 58px;
   border: 1px solid #8E8E8E;
 }

@@ -10,10 +10,10 @@
 </head>
 <body>
   <div class="calculator-container">
-    <div>
+    <pre id='json'></pre>
       <div class="calculator-body">
         <div class="calculator-window">
-            <h1>0</h1>
+            <h1 class="calculator-display-num">0</h1>
             <div class="btn-window btn-close btn-spacing">x</div>
             <div class="btn-window btn-min btn-spacing">-</div>
             <div class="btn-window btn-open btn-spacing">+</div>
@@ -21,7 +21,7 @@
         <div class="calculator-nums">
           <div class="calculator-row">
             <div class="calculator-button calculator-num-colors">
-              <p class="calculator-font">AC</p>
+              <p id="ac" class="calculator-font">AC</p>
             </div>
             <div class="calculator-button calculator-num-colors">
               <p class="calculator-font">+/-</p>
@@ -34,7 +34,7 @@
             </div>
           </div>
           <div class="calculator-row">
-            <div id="seven" class="calculator-button calculator-num-colors">
+            <div class="calculator-button calculator-num-colors">
               <p class="calculator-font">7</p>
             </div>
             <div class="calculator-button calculator-num-colors">
@@ -44,7 +44,7 @@
               <p class="calculator-font">9</p>
             </div>
             <div class="calculator-button calculator-operations">
-              <p class="calculator-operations-font">Q</p>
+              <p class="calculator-operations-font">x</p>
             </div>
           </div>
           <div class="calculator-row">
@@ -76,10 +76,10 @@
             </div>
           </div>
           <div class="calculator-row">
-            <div class="calculator-button calculator-button-zero calculator-num-colors">
+            <div class="calculator-button-zero calculator-num-colors">
               <p class="calculator-font">0</p>
             </div>
-            <div class="calculator-button calculator-num-colors">
+            <div id="dec-point" class="calculator-button calculator-num-colors">
               <p class="calculator-font">•</p>
             </div>
             <div class="calculator-button calculator-operations">
