@@ -1,77 +1,57 @@
-document.addEventListener("DOMContentLoaded", function(event) {
-
-
-//get my dom nodes
-  // var getAllNums = function() {
-  //   var data = document.getElementsByClassName("calculator-font");
-  //   return data;
-  // }
-
-  // var getAllOperations = function() {
-  //   var data = document.getElementsByClassName("calculator-operations-font");
-  //   return data;
-  // }
-
-  // var operations =
-  // {
-  //   clear: getAllNums()[0].childNodes[0].nodeValue,
-  //   plusOrNeg: getAllNums()[1].childNodes[0].nodeValue,
-  //   percent: getAllNums()[2].childNodes[0].nodeValue,
-  //   decimal: getAllNums()[13].childNodes[0].nodeValue,
-  //   multiply: getAllOperations()[0].childNodes[0].nodeValue,
-  //   add: getAllOperations()[1].childNodes[0].nodeValue,
-  //   subtract: getAllOperations()[2].childNodes[0].nodeValue,
-  //   divide: getAllOperations()[3].childNodes[0].nodeValue,
-  // }
-
+document.addEventListener("DOMContentLoaded", function(event){
   var calculatorWindow = document.querySelector(".calculator-display-num");
-  var currentNums = []
-  var displayNums = function() {
-    calculatorWindow.innerText = currentNums.join('')
-  }
-
-  var calcNums = document.querySelector('.calculator-nums');
-  calcNums.onclick = function calcNums(event) {
-    currentNums.push(Number(event.target.innerText))
-    console.log('these are our current numbers', currentNums)
-    displayNums()
-  }
-
-
-
-
-    // var clearCalc = function() {
-    //   var ac = document.querySelector('#ac');
-    //   ac.onclick = function(event) {
-    //     var calculatorWindow = document.querySelector(".calculator-display-num");
-    //     calculatorWindow.innerText = 0
-    //   }
-    // }
-
-    // var multiply = function() {
-    //   var calculatorWindow = document.querySelector(".calculator-display-num");
-    //   calculatorWindow.innerText = calculatorWindow.innerText + event.target.innerText;
-    //   var newNums = calculatorWindow.innerText;
-    //   var result = currentNums * newNums
-    //   if(event.target.innerText === '='){
-    //     return result
-    //   }
-    //   console.log('this is our result', result)
-    // }
-    // console.log("this is our current number", currentNums)
-
-    // if(event.target.innerText === 'AC') {
-    //   clearCalc()
-    // } else if(event.target.innerText === 'x') {
-    //   console.log('we are here now', event.target.innerText)
-    //   calculatorWindow.innerText = 0
-    //   multiply()
-    // }
-
-
-
-
+  var calc = new Calculator(calculatorWindow);
+  calc.addEventHandlers();
 })
+
+  function Calculator(calculatorWindow) {
+    this.currentNums = [];
+    this.newNums = [];
+    this.calculatorWindow = calculatorWindow;
+    this.pushToCurrentNums = this.pushToCurrentNums.bind(this)
+  }
+
+  Calculator.prototype = {
+
+    nums:
+    {
+      '0': 'zero', '1': 'one', '2': 'two', '3': 'three', '4': 'four', '5': 'five',
+      '6': 'six', '7': 'seven', '8': 'eight', '9': 'nine', 'AC': 'AC'
+    },
+
+    calcOperations:
+    {
+      '+': function add (currentVal, newVal) { return currrentVal + newVal },
+      '-': function subtract (currrentVal, newVal) { return currrentVal - newVal },
+      'x': function multiply (currentVal, newVal) { return currrentVal * newVal },
+      '÷': function divide (currrentVal, newVal) { return currrentVal / newVal }
+    },
+
+    addEventHandlers: function(event) {
+      var calcNums = document.querySelector('.calculator-nums')
+
+      calcNums.addEventListener('click', this.pushToCurrentNums)
+      calcNums.addEventListener('click', this.clearDisplay)
+    },
+
+    pushToCurrentNums: function(event) {
+      console.log('what pushToCurrentNums thinks this is', this)
+      this.currentNums.push(Number(event.target.innerText))
+      this.displayNums()
+    },
+
+    displayNums: function() {
+      this.calculatorWindow.innerText = this.currentNums.join('')
+    },
+
+    clearDisplay: function() {
+      this.currentNums = [];
+      this.newNums = [];
+      this.calculatorWindow = 0;
+    }
+
+  }
+
 
 
 
