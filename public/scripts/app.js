@@ -27,11 +27,15 @@ document.addEventListener("DOMContentLoaded", function(event){
       '÷': function divide (currrentVal, newVal) { return currrentVal / newVal }
     },
 
+
+
     addEventHandlers: function(event) {
       var calcNums = document.querySelector('.calculator-nums')
 
-      calcNums.addEventListener('click', this.pushToCurrentNums)
-      calcNums.addEventListener('click', this.clearDisplay)
+      calcNums.addEventListener('click', function() {
+
+      })
+      // calcNums.addEventListener('click', this.clearDisplay)
     },
 
     pushToCurrentNums: function(event) {
